@@ -1,3 +1,5 @@
+/* global $ */
+
 /**
  * starts all listeners
  */
@@ -15,7 +17,7 @@ function handleRadioButton() {
     let selected = $(e.currentTarget).val();
     $('section').addClass('hidden');
     $(selected).removeClass('hidden');
-  })
+  });
 }
 
 /**
