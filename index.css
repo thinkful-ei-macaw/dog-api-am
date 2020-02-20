@@ -85,6 +85,7 @@ article {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-flow: row wrap;
   width: 100%;
 }
 
