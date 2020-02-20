@@ -18,7 +18,22 @@ function handleFormSubmit() {
 function requestDogs(count){
   fetch(`https://dog.ceo/api/breeds/image/random/${count}`)
     .then(response => response.json())
-    .then(responseJSON => console.log(responseJSON));
+    .then(responseJSON => displayDogImages(responseJSON));
+}
+
+function displayDogImages(data) {
+  // adding to the dom
+  let html = generateImageTemplates(data);
+  $('#dogImages').html(html);
+}
+
+function generateImageTemplates(data) {
+  let html = '';
+  const images = data.message;
+  images.forEach( image => {
+    html += `<img src="${image}">`;
+  });
+  return html;
 }
 
 $(handleFormSubmit);
