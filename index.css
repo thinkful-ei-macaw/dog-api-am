@@ -83,19 +83,12 @@ button:active {
 article {
   margin-bottom: 3em;
   display: flex;
-  flex-flow: row wrap;
-  margin-left: .25em;
+  align-items: center;
+  justify-content: center;
   width: 100%;
 }
 
 article img {
-  flex: auto;
-  height: 250px;
-  min-width: 150px;
-  margin: 0 .5em .5em 0; /* Some gutter */
-}
-
-#app2 article img {
-  height: 100%;
-  width: 100%;
+  height: 300px;
+  margin: .25em;
 }
