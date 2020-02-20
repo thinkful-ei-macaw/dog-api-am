@@ -4,6 +4,15 @@
 function init(){
   handleDogFormSubmit();
   handleDogBreedFormSubmit();
+  handleRadioButton();
+}
+
+function handleRadioButton() {
+  $('#screen input').on('change', function(e){
+    let selected = $(e.currentTarget).val();
+    $('section').addClass('hidden');
+    $(selected).removeClass('hidden');
+  })
 }
 
 /**

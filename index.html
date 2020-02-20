@@ -3,36 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dog API</title>
+  <title>Dogs!</title>
+  <link rel="stylesheet" href="index.css">
 </head>
 <body>
   
-  <h1>Dog API Demo</h1>
-  <section id="app1">
-    <form action="" id="dogForm">
-      <p>
-        <label for="dogInput">How many dogs do you want to see?</label><br>
-        <input id="dogInput" type="number" name="dogs" min="1" max="50" value="3">
-      </p>
-      <button>Get the dogs! 🐶</button>
+  <header>
+    <h1>Dogs! 🐶</h1>
+    <form id="screen">
+      <label>View: </label>
+      <label>
+        <input type="radio" checked name="screen" value="#app1">
+        by count
+      </label>
+      <label>
+        <input type="radio" name="screen" value="#app2">
+        by breed
+      </label>
     </form>
+  </header>
 
-    <article id="dogImages"></article>
-  </section>
+  <main>
+    <section id="app1">
+      <form action="" id="dogForm">
+        <label for="dogInput">How many dogs do you want to see?</label>
+        <div>
+          <input id="dogInput" type="number" name="dogs" min="1" max="50" value="3">
+          <button>Get the dogs!</button>
+        </div>
+      </form>
 
-  <hr>
+      <article id="dogImages"></article>
+    </section>
 
-  <section id="app2">
-    <form action="" id="dogBreedForm">
-      <p>
-        <label for="dogBreed">What breed of dog do you want to see?</label><br>
-        <input required id="dogBreed" type="text">
-      </p>
-      <button>Get the dogs! 🐶</button>
-    </form>
+    <section id="app2" class="hidden">
+      <form action="" id="dogBreedForm">
+        <label for="dogBreed">What breed of dog do you want to see?</label>
+        <div>
+          <input required id="dogBreed" type="text">
+          <button>Get the dogs!</button>
+        </div>
+      </form>
 
-    <article id="dogBreedImages"></article>
-  </section>
+      <article id="dogBreedImages"></article>
+    </section>
+  </main>
 
 
   
