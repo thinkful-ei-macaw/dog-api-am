@@ -81,15 +81,21 @@ button:active {
 }
 
 article {
-  display: flex;
-  width: 100%;
-  flex-wrap: wrap;
-  justify-content: center;
   margin-bottom: 3em;
+  display: flex;
+  flex-flow: row wrap;
+  margin-left: .25em;
+  width: 100%;
 }
 
 article img {
-  display: inline-block;
-  height: 300px;
-  margin: .5em;
+  flex: auto;
+  height: 250px;
+  min-width: 150px;
+  margin: 0 .5em .5em 0; /* Some gutter */
+}
+
+#app2 article img {
+  height: 100%;
+  width: 100%;
 }
