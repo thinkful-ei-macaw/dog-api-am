@@ -8,15 +8,33 @@
 <body>
   
   <h1>Dog API Demo</h1>
-  <form action="" id="dogForm">
-    <p>
-      <label for="dogInput">How many dogs do you want to see?</label><br>
-      <input id="dogInput" type="number" name="dogs" min="1" max="50" value="3">
-    </p>
-    <button>Get the dogs! 🐶</button>
-  </form>
+  <section id="app1">
+    <form action="" id="dogForm">
+      <p>
+        <label for="dogInput">How many dogs do you want to see?</label><br>
+        <input id="dogInput" type="number" name="dogs" min="1" max="50" value="3">
+      </p>
+      <button>Get the dogs! 🐶</button>
+    </form>
 
-  <section id="dogImages"></section>
+    <article id="dogImages"></article>
+  </section>
+
+  <hr>
+
+  <section id="app2">
+    <form action="" id="dogBreedForm">
+      <p>
+        <label for="dogBreed">What breed of dog do you want to see?</label><br>
+        <input required id="dogBreed" type="text">
+      </p>
+      <button>Get the dogs! 🐶</button>
+    </form>
+
+    <article id="dogBreedImages"></article>
+  </section>
+
+
   
   <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
   <script src="app.js"></script>
