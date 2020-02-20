@@ -1,5 +1,5 @@
 /**
- * Starts all listeners
+ * starts all listeners
  */
 function init(){
   handleDogFormSubmit();
@@ -7,6 +7,9 @@ function init(){
   handleRadioButton();
 }
 
+/**
+ * detects radio button click to switch current view
+ */
 function handleRadioButton() {
   $('#screen input').on('change', function(e){
     let selected = $(e.currentTarget).val();
@@ -38,8 +41,10 @@ function handleDogBreedFormSubmit() {
 }
 
 /**
- * fetches the list of dog images from the API
- * @param count the number of images to pull
+ * creates and submits a fetch request to the Dogs API
+ * @param {*} value value to submit with fetch
+ * @param {string} type 'count' or 'breed', determines type of request to be made
+ * @param {string} element selector for element to hold images
  */
 function requestDogs(value, type, element){
   let request = '';
@@ -55,6 +60,11 @@ function requestDogs(value, type, element){
     .catch(() => alert('Something went wrong. Try again later.'));
 }
 
+/**
+ * takes in JSON response and renders images to DOM
+ * @param {JSON} data the returned JSON response
+ * @param {string} element selector for element to hold images
+ */
 function displayDogImages(data, element) {
   if (data.status === 'error') {
     alert('Error: ' + data.message);
@@ -64,6 +74,10 @@ function displayDogImages(data, element) {
   }
 }
 
+/**
+ * converts a JSON object into a list of HTML images
+ * @param {JSON} data the JSON data to be converted to HTML
+ */
 function generateImageTemplates(data) {
   let html = '';
   const images = typeof data.message === 'string' ? [data.message] : data.message;
