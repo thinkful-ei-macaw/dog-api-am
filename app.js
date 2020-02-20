@@ -64,7 +64,7 @@ function requestDogs(value, type, element){
 
 /**
  * takes in JSON response and renders images to DOM
- * @param {JSON} data the returned JSON response
+ * @param {object} data the returned JSON response
  * @param {string} element selector for element to hold images
  */
 function displayDogImages(data, element) {
@@ -78,7 +78,7 @@ function displayDogImages(data, element) {
 
 /**
  * converts a JSON object into a list of HTML images
- * @param {JSON} data the JSON data to be converted to HTML
+ * @param {object} data the JSON data to be converted to HTML
  */
 function generateImageTemplates(data) {
   let html = '';
