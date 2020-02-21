@@ -37,7 +37,7 @@ function handleDogFormSubmit() {
 function handleDogBreedFormSubmit() {
   $('#dogBreedForm').submit(function(e){
     e.preventDefault();
-    let dogBreed = $('#dogBreed').val();  
+    let dogBreed = $('#dogBreed').val().toLowerCase();  
     requestDogs(dogBreed, 'breed', '#dogBreedImages');
   });
 }
